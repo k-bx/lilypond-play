@@ -85,6 +85,19 @@
       fis8
     } |
 
+    r1 |
+
+    {
+      <f c' dis>16
+      <fis cis' e>
+      <g d' f>
+      <fis cis' e>
+      <f c' dis>
+      <fis cis' e>
+      <g d' f>
+      <fis cis' e>
+      r2
+    } |
 
     r1
   }

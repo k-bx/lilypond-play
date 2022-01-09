@@ -11,3 +11,9 @@ Example of an easy iteration work would be to open pdf, emacs and terminal simul
 ```
 fd '\.(ly)$' | entr make midiout
 ```
+
+or
+
+```
+fd '\.(ly)$' | entr lilypond -dmidi-extension=mid 010-part.ly
+```
