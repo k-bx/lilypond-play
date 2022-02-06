@@ -99,7 +99,7 @@ leftHand = \new Staff \relative e, {
   <<
     {\voiceTwo <d a' f'>2}
     \new Voice {\voiceOne r4 d'8}
-  >> |
+  >> | \mark "M030"
 }
 
 rightHand = \new Staff \relative c {
@@ -113,7 +113,7 @@ rightHand = \new Staff \relative c {
     { \voiceTwo <g, bes des ees g>-> }
     \new Voice {\voiceOne r8 g'}
   >> |
-  a8 c g a f4 d |
+  a8 c g a f4 d | \mark "M030"
 }
 
 % https://extending-lilypond.readthedocs.io/en/latest/intro.html#the-scheme-sandbox
