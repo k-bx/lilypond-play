@@ -41,7 +41,7 @@ mI_l = {
   >> \oneVoice |
 }
 
-mII_l = {
+mII_l = \relative e {
   \mark "mII"
   <e, b'>8\staccato r8
   <g d'>8\staccato r8
@@ -82,13 +82,31 @@ mII_l = {
     { \voiceTwo <e b'>2 }
     \new Voice { \voiceOne r4 e'8 }
   >> \oneVoice |
+  \mark "mII_2"
+  <e, b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4
+  <gis ais cis dis>4 |
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>2 |
+
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4
+  <gis ais cis dis>4 |
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>2 |
+
+
 }
 
 leftHand = \new Staff \relative e, {
   \clef bass
-  \mI_l |
+  % \mI_l |
   \mII_l |
-  \mark "M030"
+  \mark "TODO"
 }
 
 mI_r = {
@@ -117,14 +135,26 @@ mII_r = {
   b'8\staccato d\staccato a\staccato b\staccato
   g4 g8 a |
   b\staccato d\staccato a\staccato b\staccato
-  g4 e4
+  g4 e4 |
+  \mark "mII_2"
+  b'16 d e fis e8\staccato d8\staccato
+  b4. a8 |
+  b16 d a b g8\staccato a\staccato
+  e4 g4 |
+
+  b16 d e fis e8\staccato d8\staccato
+  b4. a8 |
+  b16 d a d b8\staccato a\staccato
+  g4 e4 |
+
+
 }
 
 rightHand = \new Staff \relative c {
   \tempo 4 = 110
-  \mI_r |
+  % \mI_r |
   \mII_r |
-  \mark "M030"
+  % \mark "TODO"
 }
 
 % https://extending-lilypond.readthedocs.io/en/latest/intro.html#the-scheme-sandbox
