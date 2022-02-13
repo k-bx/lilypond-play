@@ -42,25 +42,25 @@ mI_l = {
 }
 
 mII_l = \relative e {
-  % \mark "mII"
-  % <e, b'>8\staccato r8
-  % <g d'>8\staccato r8
-  % <e b'>4. r8
-  % <e b'>8\staccato r8
-  % <g d'>8\staccato r8
-  % <<
-  %   { \voiceTwo <e b'>2 }
-  %   \new Voice { \voiceOne r4 e'8 }
-  % >> \oneVoice |
-  % <e, b'>8\staccato r8
-  % <g d'>8\staccato r8
-  % <e b'>4. r8
-  % <e b'>8\staccato r8
-  % <g d'>8\staccato r8
-  % <<
-  %   { \voiceTwo <e b'>2 }
-  %   \new Voice { \voiceOne r4 e'8 }
-  % >> \oneVoice |
+  \mark "mII"
+  <e, b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4. r8
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <<
+    { \voiceTwo <e b'>2 }
+    \new Voice { \voiceOne r4 e'8 }
+  >> \oneVoice |
+  <e, b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4. r8
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <<
+    { \voiceTwo <e b'>2 }
+    \new Voice { \voiceOne r4 e'8 }
+  >> \oneVoice |
   \mark "mII_2"
   <d, a'>8\staccato r8
   <f c'>8\staccato r8
@@ -126,10 +126,20 @@ mII_l = \relative e {
   >> \oneVoice |
 }
 
+mIII_l = \relative e {
+  \mark "mIII"
+  r16 \bar "|"
+  <e, a c>2 <e g b>
+  <dis g ais> <e g b>
+  <e a c> <e g b>
+  <dis g ais> <e g b>
+}
+
 leftHand = \new Staff \relative e, {
   \clef bass
   % \mI_l |
-  \mII_l |
+  % \mII_l |
+  \mIII_l
 }
 
 mI_r = {
@@ -138,15 +148,15 @@ mI_r = {
 }
 
 mII_r = \relative e {
-  % \mark "mII"
-  % b'8\staccato d\staccato a\staccato b\staccato
-  % g4 g8 a |
-  % b\staccato d\staccato a\staccato b\staccato
-  % g4 e4 |
-  % b'8\staccato d\staccato a\staccato b\staccato
-  % g4 g8 a |
-  % b\staccato d\staccato a\staccato b\staccato
-  % g4 e |
+  \mark "mII"
+  b'8\staccato d\staccato a\staccato b\staccato
+  g4 g8 a |
+  b\staccato d\staccato a\staccato b\staccato
+  g4 e4 |
+  b'8\staccato d\staccato a\staccato b\staccato
+  g4 g8 a |
+  b\staccato d\staccato a\staccato b\staccato
+  g4 e |
   \mark "mII_2"
   a8\staccato c\staccato g\staccato a\staccato
   f4
@@ -194,10 +204,17 @@ mII_r = \relative e {
   g4 e4 |
 }
 
+mIII_r = \relative e {
+  \mark "mIII"
+  e'16 \bar "|"
+  c' c b a e g g fis e b dis dis f g dis e fis g a b e, c' c b a e g g fis e b dis dis f g dis e fis g fis e
+}
+
 rightHand = \new Staff \relative c {
   \tempo 4 = 110
   % \mI_r |
-  \mII_r |
+  % \mII_r |
+  \mIII_r
 }
 
 % https://extending-lilypond.readthedocs.io/en/latest/intro.html#the-scheme-sandbox
