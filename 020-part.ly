@@ -139,8 +139,8 @@ mIII_l = \relative e {
 
 leftHand = \new Staff \relative e, {
   \clef bass
-  % \mI_l |
-  % \mII_l |
+  \mI_l |
+  \mII_l |
   \mIII_l
 }
 
@@ -225,8 +225,8 @@ mIII_r = \relative e {
 
 rightHand = \new Staff \relative c {
   \tempo 4 = 110
-  % \mI_r |
-  % \mII_r |
+  \mI_r |
+  \mII_r |
   \mIII_r
 }
 
