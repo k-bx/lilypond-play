@@ -128,8 +128,10 @@ mII_l = \relative e {
 
 mIII_l = \relative e {
   \mark "mIII"
-  r16 \bar "|"
-  <e, a c>2 <e g b>
+
+  \partial 8 r8
+
+  <e a c>2 <e g b>
   <dis g ais> <e g b>
   <e a c> <e g b>
   <dis g ais> <e g b>
@@ -206,8 +208,19 @@ mII_r = \relative e {
 
 mIII_r = \relative e {
   \mark "mIII"
-  e'16 \bar "|"
-  c' c b a e g g fis e b dis dis f g dis e fis g a b e, c' c b a e g g fis e b dis dis f g dis e fis g fis e
+  \partial 8 e'8
+
+  c'16\staccato r c b a8 e8
+  g16\staccato r g fis e8 b8 |
+
+  dis16\staccato r dis f g8 dis8
+  e16 fis g a b8 e,8 |
+
+  c'16\staccato r c b a8 e8
+  g16\staccato r16 g fis e8 b8 |
+
+  dis16\staccato r dis f g8 dis
+  e16 fis g fis e8 b8 |
 }
 
 rightHand = \new Staff \relative c {
