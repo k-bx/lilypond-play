@@ -137,11 +137,50 @@ mIII_l = \relative e {
   <dis g ais> <e g b>
 }
 
+mIV_l_I = \relative e, {
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4. r8
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <<
+    { \voiceTwo <e b'>2 }
+    \new Voice { \voiceOne r4 e'8 }
+  >> \oneVoice |
+  <e, b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4. r8
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
+  <<
+    { \voiceTwo <e b'>2 }
+    \new Voice { \voiceOne r4 e'8 }
+  >> \oneVoice |
+  <d, a'>8\staccato r8
+  <f c'>8\staccato r8
+  <d a' f'>4
+  <gis ais cis dis>4-> |
+  <d a'>8\staccato r8
+  <f c'>8\staccato r8
+  <<
+    {\voiceTwo <d a' f'>2}
+    \new Voice {\voiceOne r4 d'8}
+  >> |
+}
+
+mIV_l = \relative e, {
+  \mark "mIV"
+  \mIV_l_I
+  \mark "mIV_2"
+  \mIV_l_I
+}
+
 leftHand = \new Staff \relative e, {
   \clef bass
-  \mI_l |
-  \mII_l |
-  \mIII_l
+  % \mI_l |
+  % \mII_l |
+  % \mIII_l |
+  \mIV_l
 }
 
 mI_r = {
@@ -223,11 +262,25 @@ mIII_r = \relative e {
   e16 fis g fis e8 b8 |
 }
 
+mIV_r = \relative e' {
+  \mark "mIV"
+
+  r1 r r r r r |
+
+  \mark "mIV_2"
+
+  <a, e' b'>8 d' <c, f a> b'
+  <a, e' g> r g' r
+  <a, e' g> b' <c, f d'> a'
+  <a, e' b'>4 r4 |
+}
+
 rightHand = \new Staff \relative c {
   \tempo 4 = 110
-  \mI_r |
-  \mII_r |
-  \mIII_r
+  % \mI_r |
+  % \mII_r |
+  % \mIII_r |
+  \mIV_r
 }
 
 % https://extending-lilypond.readthedocs.io/en/latest/intro.html#the-scheme-sandbox
