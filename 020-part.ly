@@ -173,7 +173,7 @@ mIV_l = \relative e, {
 
   \mark "mIV_2"
 
-  <e b'>8\staccato r8
+  <e, b'>8\staccato r8
   <g d'>8\staccato r8
   <e b'>4. r8
   <e b'>8\staccato r8
@@ -185,7 +185,8 @@ mIV_l = \relative e, {
 
   <e, b'>8\staccato r8
   <g d'>8\staccato r8
-  <e b'>4. r8
+  <e b'>4
+  <gis ais cis dis>4->
   <e b'>8\staccato r8
   <g d'>8\staccato r8
   <<
@@ -219,16 +220,17 @@ mIV_l = \relative e, {
 
   \mark "mIV_4"
 
-  <d, a'>8\staccato r8
-  <f c'>8\staccato r8
-  <d a' f'>4
-  <gis ais cis dis>4-> |
-  <d a'>8\staccato r8
-  <f c'>8\staccato r8
+  <e, b'>8\staccato r8
+  <g d'>8\staccato r8
+  <e b'>4. r8
+  <e b'>8\staccato r8
+  <g d'>8\staccato r8
   <<
-    {\voiceTwo <d a' f'>2}
-    \new Voice {\voiceOne r4 d'8}
-  >> |
+    { \voiceTwo <e b'>2 }
+    \new Voice { \voiceOne r4 e'8 }
+  >> \oneVoice |
+
+  \mark "mIV_5"
 
   <e, b'>8\staccato r8
   <g d'>8\staccato r8
@@ -376,21 +378,15 @@ mIV_r = \relative e {
 
   \mark "mIV_4"
 
-  r4 <f a>8 e'
-  <g, g'>4 r4
-  <a fis'>8 d <f, b> e'
-  <g, d'>4 r4
-
   <<
     {\voiceOne
-     ees4 d ees4
+     ees4 d ees2
     }
     \new Voice
     {\voiceTwo
-      cis'4 g8 b8 bes4
+      cis'4 g8 b8 bes2
     }
-  >>
-  r4 |
+  >> |
 
   <<
     {\voiceOne
@@ -402,6 +398,28 @@ mIV_r = \relative e {
     }
   >>
   r4 |
+
+  \mark "mIV_5"
+
+  <<
+    {\voiceOne
+     d,4 cis ees r
+    }
+    \new Voice
+    {\voiceTwo
+     d'4 g,8 cis bes4 r4
+    }
+  >>
+
+  <<
+    {\voiceOne
+     e,4 cis d r
+    }
+    \new Voice
+    {\voiceTwo
+     b'8 fis ais f a4 r4
+    }
+  >>
 }
 
 rightHand = \new Staff \relative c {
